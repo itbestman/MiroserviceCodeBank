@@ -1,0 +1,4 @@
+// dont run any command untill you not fix startup project
+
+*  Install-Package Microsoft.EntityFrameworkCore.Tools
+*  Add-Migration InitialCreate

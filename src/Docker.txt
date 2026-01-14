@@ -22,12 +22,17 @@ docker system prune
 
 Close all dockers and run with below command on that location;
 
-docker-compose -f docker-compose.yml -f docker-compose.override.yml up --build
+docker-compose -f docker-compose.yml -f docker-compose.override.yml up --build -d
 or
 docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
+
 docker-compose -f docker-compose.yml -f docker-compose.override.yml down
 
 
 ----------------------------------
 mongo client
 docker run -d -p 3000:3000 mongoclient/mongoclient
+
+
+to go inside stopped container
+docker run -it --entrypoint /bin/sh basketapi

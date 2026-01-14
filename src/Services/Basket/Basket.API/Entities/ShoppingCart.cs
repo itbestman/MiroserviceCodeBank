@@ -5,11 +5,10 @@ namespace Basket.API.Entities
     public class ShoppingCart
     {
         public string UserName { get; set; }
-        public List<ShoppingCartItem> Items  { get; set; } = new List<ShoppingCartItem>();
+        public List<ShoppingCartItem> Items { get; set; } = new List<ShoppingCartItem>();
 
         public ShoppingCart()
         {
-            
         }
 
         public ShoppingCart(string userName)
@@ -21,12 +20,12 @@ namespace Basket.API.Entities
         {
             get
             {
-                decimal totalPrice = 0;
+                decimal totalprice = 0;
                 foreach (var item in Items)
                 {
-                    totalPrice += item.Price * item.Quantity;
+                    totalprice += item.Price * item.Quantity;
                 }
-                return totalPrice;
+                return totalprice;
             }
         }
     }

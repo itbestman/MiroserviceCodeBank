@@ -15,3 +15,35 @@ set key value
 get key
 set name mehmet
 get name
+
+
+
+get all keys
+
+> SCAN 0 MATCH * COUNT 100
+
+or
+> KEYS *
+
+1) "manish" 2) "name" 3) "key" 4) "string"
+
+> TYPE manish
+
+--------
+If  hash
+HGETALL manish
+
+
+If list
+LRANGE manish 0 -1
+
+
+If set:
+SMEMBERS manish
+
+
+If  zset
+
+ZRANGE manish 0 -1 WITHSCORES
+
+

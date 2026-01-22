@@ -2,3 +2,9 @@
 
 *  Install-Package Microsoft.EntityFrameworkCore.Tools
 *  Add-Migration InitialCreate
+
+
+// install new package
+
+* install-package ocelot
+* Update-Package -ProjectName OcelotApiGw
